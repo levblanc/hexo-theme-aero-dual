@@ -1,0 +1,42 @@
+# Header Menu
+menu:
+  Home: /
+  Archives: /archives
+  # change github and email values to your own addresses
+  Github: https://github.com/levblanc
+  Email: mailto:levblanc@163.com
+rss: /atom.xml
+
+# Set to false to disable banner
+use_header_cover: true
+
+# URL of the banner image
+# Put your custom banner image under
+# the theme's img folder: your-blog/themes/minimal-dual/source/img/
+# and modify index_cover's value like so:
+# index_cover: /img/your-custom-banner.jpg
+# or
+# Put your custom banner image under
+# your blog's images folder: your-blog/source/images/
+# and modify index_cover's value like so:
+# index_cover: /images/your-custom-banner.jpg
+# or
+# Specify an online resource like so:
+# index_cover: http://somewhere.com/path/to/banner.jpg
+index_cover: /img/default-banner-dark.jpg
+
+widgets:
+- category
+- tag
+- archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# favicon
+favicon: /favicon.png
+
+# Google Analytics Tracking ID
+google_analytics:
+

@@ -1,0 +1,55 @@
+<!-- Page Header -->
+<%
+  var headerClass = 'site-header';
+  var headerStyle = '';
+  var pageTitleClass = 'page-title';
+  var pageTitle = '';
+  var pageSubtitle = '';
+  var siteMenuClass = 'site-menu';
+
+  if (theme.use_header_cover) {
+    headerClass += ' header-background';
+    headerStyle = 'background-image: url(' + theme.index_cover + ')';
+    pageTitleClass += ' with-background-image';
+    siteMenuClass += ' with-background-image';
+  }
+
+  if (headerType === 'index') {
+    pageTitle = config.title;
+    if (config.subtitle) pageSubtitle = config.subtitle;
+  } else if (headerType === 'post') {
+    if (post && post.cover) headerStyle = 'background-image: url(' + post.cover + ')';
+    pageTitle = post.title || __('untitled_post');
+  } else if (headerType === 'archive') {
+    pageTitle = __('archive_title');
+  }
+%>
+
+<header class="<%= headerClass %>" style="<%= headerStyle %>">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="<%= pageTitleClass %>">
+          <p class="title"><%= pageTitle %></p>
+          <p class="subtitle"><%= pageSubtitle %></p>
+        </div>
+        <div class="<%= siteMenuClass %>">
+          <ul>
+            <% for (var i in theme.menu){ %>
+              <li>
+                <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">
+                  <% if (theme.menu[i].icon) { %>
+                  <i class="fa fa-<%= theme.menu[i].icon %> fa-stack-2x"></i>
+                  <% } else { %>
+                  <%= i %>
+                  <% } %>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+

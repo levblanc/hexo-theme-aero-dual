@@ -1,0 +1,35 @@
+$color-white = #E0E0E0
+$color-beige = #F0E8DF
+$color-black = #171314
+
+$dark-red    = #E80C1C
+$dark-pink   = #F53156
+$dark-yellow = #F7D117
+$dark-orange = #F06807
+$dark-blue   = #1999EC
+$dark-purple = #A000F5
+
+$theme-color            = $dark-blue
+$theme-text-color       = $color-white
+$theme-background       = $color-black
+$theme-code-background  = $color-beige
+$theme-seperator        = $color-white
+$theme-dotted-seperator = $color-white
+
+color-revert()
+  color $theme-background
+  background-color $theme-color
+
+@import '_helpers/mixins'
+
+@import '_typography/typo.css'
+@import '_typography/highlight.gruvbox-light'
+@import '_typography/code'
+
+@import '_base'
+@import '_partial/header'
+@import '_partial/index-entry'
+@import '_partial/archive-entry'
+@import '_partial/article'
+@import '_partial/footer'
+@import '_partial/pagination'

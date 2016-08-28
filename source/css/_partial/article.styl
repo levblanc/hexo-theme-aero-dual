@@ -1,0 +1,39 @@
+/* normal style */
+.post-tags,
+.post-info
+  font-size remify(14px)
+  font-style italic
+  text-align center
+.post-info
+  margin-bottom remify(5px)
+  .info
+    padding 0 remify(8px)
+    border-right 1px dotted $theme-dotted-seperator
+    &:last-child
+      border-right none
+  .categories a
+    padding remify(2px) remify(4px)
+    border-radius remify(2px)
+.post-tags
+  font-style italic
+  > a
+    display inline-block
+    padding 0 remify(4px)
+    margin-right remify(2px)
+    border-radius remify(2px)
+.post-content
+  padding-top remify(40px)
+  padding-bottom @padding-top
+  font-size remify(15px)
+
+/* mobile style */
+@media only screen and (max-width: 414px)
+  .post-tags,
+  .post-info
+    font-size remify(12px)
+    .info
+      padding 0 remify(5px)
+    .time
+      display none
+  .post-content
+    font-size remify(12.5px)

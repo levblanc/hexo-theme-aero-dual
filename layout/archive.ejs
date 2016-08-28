@@ -1,0 +1,14 @@
+<!-- Archive Header -->
+<%- partial('_partial/header', {headerType: 'archive'}) %>
+<!-- Archive List -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <% page.posts.each(function(post){ %>
+        <%- partial('_partial/archive-entry', {post: post, index: true}) %>
+      <% }) %>
+
+    </div>
+  </div>
+</div>
+<%- partial('_partial/pagination') %>

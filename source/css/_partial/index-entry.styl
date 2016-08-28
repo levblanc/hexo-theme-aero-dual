@@ -1,0 +1,69 @@
+/* normal style */
+.post-item-wrapper
+  padding remify(35px) 0
+  border-bottom 1px solid $theme-seperator
+  text-align center
+  &:last-child
+    border-bottom none
+  overflow hidden
+  .post-title
+    display inline-block
+    padding 0 remify(10px)
+    margin-bottom remify(20px)
+    font-size remify(22px)
+    text-align center
+    border-radius remify(2px)
+  .post-excerpt
+    overflow hidden
+  .date-and-category,
+  .excerpt,
+  .tags
+    float left
+  .date-and-category,
+  .tags
+    width 14%
+  .excerpt
+    width 64%
+    margin 0 4%
+    font-size remify(14px)
+    text-align justify
+    p
+      margin-bottom 0
+  .date-and-category
+    font-size remify(13px)
+    text-align center
+    border 1px solid $theme-color
+    border-radius remify(3px)
+    .date, .categories
+      padding remify(2px) 0
+    .date
+      color $theme-color
+    .categories
+      color-revert()
+      > a
+        color-revert()
+  .tags
+    overflow hidden
+    .untagged, .tag
+      display inline-block
+      font-size remify(13px)
+      padding 0 remify(5px)
+      text-align center
+      border 1px solid $theme-color
+      border-radius remify(3px)
+    .untagged
+      color $theme-color
+
+/* mobile style */
+@media only screen and (max-width: 768px)
+  .post-item-wrapper
+    .date-and-category,
+    .tags
+      display none
+    .excerpt
+      width 100%
+      padding 0 5%
+      margin 0
+      float none
+    .post-title
+      font-size remify(18px)

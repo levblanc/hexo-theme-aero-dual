@@ -1,0 +1,22 @@
+/* normal style */
+.pagination
+  display block
+  text-align center
+  overflow hidden
+  > li
+    display inline-block
+    > a
+      color $theme-color
+      background-color $theme-background
+      border 1px solid $theme-color
+      border-radius remify(3px)
+      &:hover
+        color-revert()
+        border 1px solid $theme-color
+      span
+        display inline-block
+
+/* mobile style */
+@media only screen and (max-width: 414px)
+  .pagination
+    font-size remify(14px)

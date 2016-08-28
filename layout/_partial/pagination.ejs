@@ -1,0 +1,25 @@
+<!-- Pagination -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-md-offset-1">
+      <ul class="pagination">
+          <% if (page.prev){ %>
+              <li class="previous">
+                <a href="<%- url_for(page.prev_link) %>">
+                  <span class="symbol-left">&lt;</span>
+                  <span><%- __('prev')%></span>
+                </a>
+              </li>
+          <% } %>
+          <% if (page.next){ %>
+            <li class="next">
+              <a href="<%- url_for(page.next_link) %>">
+                <span><%- __('next')%></span>
+                <span class="symbol-right">&gt;</span>
+              </a>
+            </li>
+          <% } %>
+      </ul>
+    </div>
+  </div>
+</div>

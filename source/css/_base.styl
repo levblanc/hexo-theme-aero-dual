@@ -1,0 +1,27 @@
+@media (min-width: 1440px)
+  .container
+    // max-width 760px
+
+html,
+body
+  color $theme-text-color
+  background-color $theme-background
+  base-font-size(100%)
+
+ul li
+  display inline-block
+  list-style none
+
+a
+  color $theme-color
+  &:hover
+    text-decoration none
+    color-revert()
+    transition all .25s
+    cursor pointer
+
+strong
+  color $theme-text-color
+
+h1, h2, h3, h4, h5, h6
+  color $theme-text-color

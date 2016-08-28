@@ -1,0 +1,30 @@
+/* mobile style */
+.highlight
+  overflow auto
+  table
+    width 100%
+    max-width 100%
+  pre
+    font-size remify(13px)
+  .gutter
+    width 5%
+    text-align right
+    pre
+      border-top 0
+      border-bottom @border-top
+      border-left @border-top
+  .code
+    width 95%
+    pre
+      border 0
+code
+  color $theme-color
+  padding 0 remify(2px)
+  margin 0 remify(2px)
+  border-radius remify(1px)
+  background-color $theme-code-background
+
+/* mobile style */
+@media only screen and (max-width: 414px)
+  .highlight pre
+    font-size remify(12px)

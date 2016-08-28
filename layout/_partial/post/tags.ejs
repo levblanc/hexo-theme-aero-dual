@@ -1,0 +1,9 @@
+<%
+  var postTags = [];
+  tags.forEach(function(tag){
+    postTags.push('<a class="tag" href="' + config.root + tag.path + '">' + (tagHash ? '#' : '') + tag.name + '</a>');
+  });
+%>
+
+<%- postTags.join(' ') %>
+

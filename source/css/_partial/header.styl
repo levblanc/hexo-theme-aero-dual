@@ -1,0 +1,58 @@
+/* normal style */
+.site-header
+  padding remify(40px) 0
+  border-bottom 1px solid $theme-seperator
+  margin-bottom remify(30px)
+  &.header-background
+    border-bottom 0
+    background-color gray
+    background-position center center
+    background-attachment scroll
+    -webkit-background-size cover
+    -moz-background-size cover
+    background-size cover
+    -o-background-size cover
+  .page-title
+    color $theme-color
+    text-align center
+    text-shadow 1px 1px 2px $color-black
+    &.with-background-image
+      color $color-white
+      padding remify(50px) 0
+    .title
+      font-size remify(36px)
+
+.site-menu
+  text-align center
+  margin-top remify(10px)
+  text-shadow 3px 3px 3px $color-black
+  ul
+    margin 0 auto
+    padding 0
+    > li
+      margin-right remify(10px)
+      &:last-child
+        margin-right 0
+      > a
+        padding remify(3px) remify(10px)
+        border-radius remify(2px)
+  &.with-background-image
+    a
+      color $color-white
+
+/* mobile style */
+@media only screen and (max-width: 414px)
+  .site-header
+    .page-title
+      &.with-background-image
+        padding remify(30px) 0
+      .title
+        font-size remify(22px)
+  .site-menu
+    font-size remify(16px)
+    ul li
+      margin-right 0
+      > a
+        padding remify(3px) remify(6px)
+
+

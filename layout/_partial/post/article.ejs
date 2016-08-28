@@ -1,0 +1,37 @@
+<%- partial('_partial/header', {
+  headerType: 'post',
+  post: post
+}) %>
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          <% if (config.author) { %>
+            <!-- Author -->
+            <span class="author info">By <%- config.author %></span>
+          <% } %>
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date"><%- date(post.date) %></span>
+            <span class="time"><%- time(post.time) %></span>
+          </span>
+          <% if (post.categories && post.categories.length){ %>
+          <!--  Categories  -->
+            <span class="categories info">Under <%- partial('categories', {categories: post.categories}) %></span>
+          <% } %>
+        </div>
+        <!-- Tags -->
+        <% if (post.tags && post.tags.length) { %>
+          <div class="post-tags text-muted">
+            Tags: <%- partial('tags', {tags: post.tags, tagHash: true}) %>
+          </div>
+        <% } %>
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <%- post.content %>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

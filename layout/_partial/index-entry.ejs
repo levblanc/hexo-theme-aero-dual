@@ -1,0 +1,28 @@
+<div class="post-item-wrapper">
+  <a href="<%- url_for(post.path) %>" class="post-title">
+      <%= post.title || __('untitled_post') %>
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date"><%= date(post.date) %></div>
+      <div class="categories">
+        <% if (post.categories && post.categories.length) { %>
+          <%- partial('post/categories', {categories: post.categories}) %>
+        <% } else { %>
+          <%- __('uncategorized') %>
+        <% } %>
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><%- post.excerpt || __('no_excerpt') %></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      <% if (post.tags && post.tags.length) { %>
+        <%- partial('post/tags', {tags: post.tags, tagHash: false}) %>
+      <% } else { %>
+        <div class="untagged"><%- __('untagged') %></div>
+      <% }  %>
+    </div>
+  </div>
+</div>
