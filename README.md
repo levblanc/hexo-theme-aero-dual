@@ -1,8 +1,13 @@
 # Aero Dual Hexo Theme
 
-A hexo theme with aero, responsive design. **Easy switch of dark and light style by simple config.** You can also change theme color by modifying corresponding stylesheet([will explain below](https://github.com/levblanc/hexo-theme-aero-dual#change-theme-color)). Each style has **FIVE** colors ready to use. [See it live here](http://levblanc.github.io/)  (configured as dark theme style with blue theme color by the time I fininshed this doc, will change in the future).
+A hexo theme with aero, responsive design. **Easy switch of dark and light style by simple config ([will explain below](https://github.com/levblanc/hexo-theme-aero-dual#configuration)).** You can also change theme color by modifying corresponding stylesheet. Each style has **FIVE** colors ready to use ([check it out!](https://github.com/levblanc/hexo-theme-aero-dual#change-theme-color)). As a **bonus**, theme style can also be switched **automatically** with a simple tweak ([Yay! Code snippet provided!](https://github.com/levblanc/hexo-theme-aero-dual#bonus-automatic-theme-style-switch)).
 
-![](https://github.com/levblanc/hexo-theme-aero-dual/blob/master/source/img/aero-dual-thumbnail.jpg)
+[See It Live Here](http://levblanc.github.io/)  
+(configured as dark theme style, blue theme color, without automatic theme style switch by the time I fininshed this doc, will change in the future).
+
+![Dark and Light Style Switch](https://github.com/levblanc/hexo-theme-aero-dual/blob/master/source/img/aero-dual-thumbnail.jpg)
+
+![Theme Color Switch](https://github.com/levblanc/hexo-theme-aero-dual/blob/master/source/img/aero-dual-color-change.jpg)
 
 
 ## Third party libraries used
@@ -57,6 +62,36 @@ You can configure `theme_style` as `dark` or `light` (this is where `dual` in th
 theme_style: dark
 ```
 
+### [Bonus] Automatic Theme Style Switch
+
+Find the following `ejs` file:
+
+``` bash
+<your-blog>/themes/aero-dual/layout/_partial/html-head.ejs
+```
+
+Replace the following part:
+
+``` ejs
+  <!-- Custom CSS -->
+  <% var targetStyle = 'css/style.' + (config.theme_style || 'light') + '.css' %>
+  <%- css(targetStyle) %>
+```
+
+With
+
+``` ejs
+  <!-- Custom CSS -->
+  <% var currentHour = new Date().getHours(); var targetStyle; %>
+  <% if (currentHour < 6 && currentHour > 18) {
+    targetStyle = 'css/style.dark.css';
+  } else {
+    targetStyle = 'css/style.light.css';
+  } %>
+  <%- css(targetStyle) %>
+```
+This will control the theme style to be `light` between 6:00 a.m. and 6:00 p.m., and switch to `dark` style when time's beyond these hours. Of course, you can change number `6` and `18` to whatever hours you want.
+
 
 ### Change Theme Color
 
@@ -67,10 +102,11 @@ But **RELAX**, it's **SIMPLE**.
 Under the following path:
 
 ``` bash
-themes/aero-dual/source/css/
+<your-blog>/themes/aero-dual/source/css/
 ```
 
 There are two stylesheet files: `style.light.styl` and `style.dark.styl`.
+(OK, if you really don't know how to find them following the above path, just **search the files by name** in your project :) )
 
 Let's use `style.light.styl` as example. You will see colors already pre-configured in this file:
 
