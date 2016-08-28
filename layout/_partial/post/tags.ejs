@@ -1,7 +1,7 @@
 <%
   var postTags = [];
   tags.forEach(function(tag){
-    postTags.push('<a class="tag" href="' + config.root + tag.path + '">' + (tagHash ? '#' : '') + tag.name + '</a>');
+    postTags.push('<a class="tag" href="' + url_for(tag.path) + '">' + (tagHash ? '#' : '') + tag.name + '</a>');
   });
 %>
 
