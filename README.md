@@ -83,7 +83,7 @@ With
 ``` ejs
   <!-- Custom CSS -->
   <% var currentHour = new Date().getHours(); var targetStyle; %>
-  <% if (currentHour < 6 && currentHour > 18) {
+  <% if (currentHour < 6 || currentHour > 18) {
     targetStyle = 'css/style.dark.css';
   } else {
     targetStyle = 'css/style.light.css';
