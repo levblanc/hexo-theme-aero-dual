@@ -5,7 +5,7 @@ A hexo theme with aero, responsive design. **Easy switch of dark and light style
 [See It Live Here](http://levblanc.github.io/)  
 (configured as dark theme style, blue theme color, without automatic theme style switch by the time I fininshed this doc, will change in the future).
 
-**Please note: this theme doesn't support widgets and comment out of the box. Adding them would be a big maybe, depending on my current workload. If you really like this theme, feel free to tweak and play with it on adding them by yourself. Also, checking out other hexo themes may help. :)**
+**Please note: this theme doesn't support widgets(other than tag, category and archive) and comment out of the box. Adding them would be a big maybe, depending on my current workload. If you really like this theme, feel free to tweak and play with it on adding them by yourself. Also, checking out other hexo themes may help. :)**
 
 ![Dark and Light Style Switch](https://github.com/levblanc/hexo-theme-aero-dual/blob/master/source/img/aero-dual-thumbnail.jpg)
 
@@ -57,7 +57,7 @@ You will have to start `hexo server` locally to see the changes.
 
 ### Change Theme Style
 
-You can configure `theme_style` as `dark` or `light` (this is where `dual` in the theme's name comes in to play). **Restart** your server after modifying the `theme_style` to see the change.
+In your blog's main `_config.yml`, configure `theme_style` as `dark` or `light` (this is where `dual` in the theme's name comes in to play). **Restart** your server after modifying the `theme_style` to see the change.
 
 ``` yaml
 # theme_style is default to 'light'
