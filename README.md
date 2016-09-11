@@ -1,9 +1,11 @@
 # Aero Dual Hexo Theme
 
-A hexo theme with aero, responsive design. **Easy switch of dark and light style by simple config ([will explain below](https://github.com/levblanc/hexo-theme-aero-dual#configuration)).** You can also change theme color by modifying corresponding stylesheet. Each style has **FIVE** colors ready to use ([check it out!](https://github.com/levblanc/hexo-theme-aero-dual#change-theme-color)). As a **bonus**, theme style can also be switched **automatically** with a simple tweak ([Yay! Code snippet provided!](https://github.com/levblanc/hexo-theme-aero-dual#bonus-automatic-theme-style-switch)).
+A hexo theme with aero, responsive design. ** Easy switch of dark and light style by simple config ([will explain below](https://github.com/levblanc/hexo-theme-aero-dual#configuration)).** You can also change theme color by modifying corresponding stylesheet. Each style has **FIVE** colors ready to use ([check it out!](https://github.com/levblanc/hexo-theme-aero-dual#change-theme-color)). As a **bonus**, theme style can also be switched **automatically** with a simple tweak ([Yay! Code snippet provided!](https://github.com/levblanc/hexo-theme-aero-dual#bonus-automatic-theme-style-switch)).
 
 [See It Live Here](http://levblanc.github.io/)  
 (configured as dark theme style, blue theme color, without automatic theme style switch by the time I fininshed this doc, will change in the future).
+
+** Please note: this theme doesn't support widgets and comment out of the box. Adding them would be a big maybe, depending on my current workload. If you really like this theme, feel free to tweak and play with it on adding them by yourself. Also, checking out other hexo themes may help. :) **
 
 ![Dark and Light Style Switch](https://github.com/levblanc/hexo-theme-aero-dual/blob/master/source/img/aero-dual-thumbnail.jpg)
 
@@ -53,7 +55,7 @@ git pull
 You will have to start `hexo server` locally to see the changes.
 
 
-### Change Theme Style 
+### Change Theme Style
 
 You can configure `theme_style` as `dark` or `light` (this is where `dual` in the theme's name comes in to play). **Restart** your server after modifying the `theme_style` to see the change.
 
@@ -95,7 +97,7 @@ This will control the theme style to be `light` between 6:00 a.m. and 6:00 p.m.,
 
 ### Change Theme Color
 
-To do this, you need to dig into the theme's stylesheets. 
+To do this, you need to dig into the theme's stylesheets.
 
 But **RELAX**, it's **SIMPLE**.
 
@@ -125,7 +127,7 @@ $light-orange = #ff6347
 $light-blue   = #1999EC
 $light-purple = #B27DF4
 
-/* modify value of $theme-color to theme colors specify above 
+/* modify value of $theme-color to theme colors specify above
   to enable different theme colors */
 $theme-color            = $light-blue   
 $theme-text-color       = $color-black
@@ -138,10 +140,10 @@ $theme-dotted-seperator = $color-grey
 Now Change `$light-blue` to `$light-orange`, and save the file.
 
 ``` stylus
-$theme-color = $light-orange 
+$theme-color = $light-orange
 ```
 
-If you have `hexo-browsersync` installed locally, the page will automatically refresh when you change the `$theme-color` value. If you haven't installed this package, just refresh the page by yourself. 
+If you have `hexo-browsersync` installed locally, the page will automatically refresh when you change the `$theme-color` value. If you haven't installed this package, just refresh the page by yourself.
 
 This way, you can add even more colors to the stylesheet and change it whenever you want. `style.dark.styl` works just the same.
 
@@ -153,7 +155,7 @@ PS: I haven't figured out the way to pass settings in `_config.yml` into stylesh
 ### Banner image
 
 Modify `use_header_cover` to enable/disable banner.
-Modify `index_cover` in the theme's `_config.yml` to change banner image. 
+Modify `index_cover` in the theme's `_config.yml` to change banner image.
 
 ``` yaml
 # Set to false to disable banner
@@ -175,7 +177,7 @@ use_header_cover: true
 index_cover: /img/default-banner-dark.jpg
 ```
 
-Up till this step, even if you don't change the theme color, you'll have at lease **FOUR** variations of the theme: `dark` style with or without home page banner; `light` style with or without home page banner. 
+Up till this step, even if you don't change the theme color, you'll have at lease **FOUR** variations of the theme: `dark` style with or without home page banner; `light` style with or without home page banner.
 
 
 ### Post's Banner Image
@@ -209,7 +211,7 @@ your-blog
 
 ### Menu
 
-Modify `menu` values in the theme's `_config.yml`. 
+Modify `menu` values in the theme's `_config.yml`.
 You can change `GitHub` and `Email` to other menu item names you want. Or you can just change these two keys' values to your own info.
 
 ``` yaml
