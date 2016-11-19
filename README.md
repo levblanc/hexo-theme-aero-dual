@@ -189,13 +189,11 @@ You can specify a custom cover in the front-matter:
 title: My awesome title
 date: 2016-07-25 18:38:45
 tags: ["awesome"]
-cover: /images/awesome-bg.jpg  # <= remember to add this line
+cover: /images/awesome-bg.jpg  # <= remember to add this line in your post
 ---
 ```
 
 You will need to create an `images` folder under your blog's `source` folder, and put your own `awesome-bg.jpg` in it for the above config to work. Of course, you can use whatever folder and image names you want, but be sure to reference them correctly in the `cover` line.
-
-Also, be aware of the color of the cover image you choose, since the title and menu color are set to white by default. Texts are very hard to distinguish in white backgrounds, although I've given the texts some shadow already.
 
 ``` bash
 your-blog
@@ -209,6 +207,8 @@ your-blog
 │    └── images   # <= here
 └── themes
 ```
+
+Also, be aware of the color of the cover image you choose, since the title and menu color are set to white by default. Texts are very hard to distinguish in white backgrounds, although I've given the texts some shadow already.
 
 
 ### Menu
