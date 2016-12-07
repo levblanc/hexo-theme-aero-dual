@@ -1,6 +1,6 @@
 # Aero Dual Hexo Theme
 
-A hexo theme with aero, responsive design. **Easy switch of dark and light style by simple config ([will explain below](https://github.com/levblanc/hexo-theme-aero-dual#configuration)).** You can also change theme color by modifying corresponding stylesheet. Each style has **FIVE** colors ready to use ([check it out!](https://github.com/levblanc/hexo-theme-aero-dual#change-theme-color)). As a **bonus**, theme style can also be switched **automatically** with a simple tweak ([Yay! Code snippet provided!](https://github.com/levblanc/hexo-theme-aero-dual#bonus-automatic-theme-style-switch)).
+A hexo theme with aero, responsive design. **Easy switch of dark and light style by simple config ([will explain below](https://github.com/levblanc/hexo-theme-aero-dual#configuration)).** You can also change theme color by modifying corresponding stylesheet. Each style has **FIVE** colors ready to use ([check it out!](https://github.com/levblanc/hexo-theme-aero-dual#change-theme-color)).
 
 [See It Live Here](http://levblanc.github.io/)  
 (configured as dark theme style, blue theme color, without automatic theme style switch by the time I fininshed this doc, will change in the future).
@@ -63,37 +63,6 @@ In your blog's main `_config.yml`, configure `theme_style` as `dark` or `light` 
 # theme_style is default to 'light'
 theme_style: dark
 ```
-
-### [Bonus] Automatic Theme Style Switch
-
-Find the following `ejs` file:
-
-``` bash
-<your-blog>/themes/aero-dual/layout/_partial/html-head.ejs
-```
-
-Replace the following part:
-
-``` ejs
-  <!-- Custom CSS -->
-  <% var targetStyle = 'css/style.' + (config.theme_style || 'light') + '.css' %>
-  <%- css(targetStyle) %>
-```
-
-With
-
-``` ejs
-  <!-- Custom CSS -->
-  <% var currentHour = new Date().getHours(); var targetStyle; %>
-  <% if (currentHour < 6 || currentHour > 18) {
-    targetStyle = 'css/style.dark.css';
-  } else {
-    targetStyle = 'css/style.light.css';
-  } %>
-  <%- css(targetStyle) %>
-```
-This will control the theme style to be `light` between 6:00 a.m. and 6:00 p.m., and switch to `dark` style when time's beyond these hours. Of course, you can change number `6` and `18` to whatever hours you want.
-
 
 ### Change Theme Color
 
