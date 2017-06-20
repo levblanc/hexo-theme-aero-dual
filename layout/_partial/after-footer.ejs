@@ -1,10 +1,13 @@
 <!-- After Footer Scripts -->
+<%- js('js/nprogress.js')%>
 <%- js('js/highlight.pack.js')%>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
+    NProgress.start();
     var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
     codeBlocks.forEach(function(block, index) {
       hljs.highlightBlock(block);
     });
   });
+  window.onload=function(){NProgress.done();}
 </script>
