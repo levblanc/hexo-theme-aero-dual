@@ -3,8 +3,8 @@ menu:
   Home: /
   Archives: /archives
   # change github and email values to your own addresses
-  Github: # https://github.com/<your-github-username>
-  Email: # mailto:<your-email-address>
+  Github: https://github.com/<your-github-username>
+  Email: mailto:<your-email-address>
 rss: /atom.xml
 
 # Set to false to disable banner
@@ -38,5 +38,4 @@ show_count: false
 favicon: /favicon.png
 
 # Google Analytics Tracking ID
-google_analytics:
-
+google_analytics: UA-83259976-1
