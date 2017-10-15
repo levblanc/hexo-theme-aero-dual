@@ -1,10 +1,13 @@
 # Header Menu
 menu:
   Home: /
-  Archives: /archives
+  Archives: /archives/
+  About: /about/
   # change github and email values to your own addresses
-  Github: https://github.com/levblanc
-  Email: mailto:levblanc@163.com
+  Github: https://github.com/justinchou
+  Gitee: https://gitee.com/justinchou
+  Email: mailto:zhou78620051@126.com
+  QQ: tencent://message/?uin=78620051&Site=qq&Menu=yes
 rss: /atom.xml
 
 # Set to false to disable banner
@@ -24,11 +27,15 @@ use_header_cover: true
 # Specify an online resource like so:
 # index_cover: http://somewhere.com/path/to/banner.jpg
 index_cover: /img/default-banner-dark.jpg
+# index_cover: /img/default-banner-light.jpg
 
 widgets:
 - category
 - tag
 - archive
+
+# theme_style is default to 'light', change to dark?
+# theme_style: dark
 
 # widget behavior
 archive_type: 'monthly'
