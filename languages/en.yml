@@ -4,11 +4,18 @@ untitled_post: Untitled Post
 uncategorized: Uncategorized
 untagged: Untagged
 no_excerpt: No Post Excerpt
-archive_title: Blog Archives
-powered_by: Powered By 
 
+archive_title: Blog Archives
 categories: Category
 tags: Tags
 tagcloud: Tag Cloud
 month_archive: Month Archives
 recent_posts: Recent Posts
+
+author_by: By
+posted_on: Posted on
+under_category: Under
+under_tags: Tags
+theme_by: Theme By
+powered_by: Powered By 
+

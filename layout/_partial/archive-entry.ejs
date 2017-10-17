@@ -2,5 +2,5 @@
   <a href="<%- url_for(post.path) %>" class="post-title">
     <%= post.title || __('untitled_post') %>
   </a>
-  <div class="date text-muted">Posted on <%= full_date(post.date) %></div>
+  <div class="date text-muted"><%= __("posted_on") %> <%= full_date(post.date) %></div>
 </div>

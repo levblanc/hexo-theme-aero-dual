@@ -2,6 +2,7 @@
   headerType: 'post',
   post: post
 }) %>
+
 <article>
   <div class="container typo">
     <div class="row">
@@ -14,31 +15,33 @@
         <% } else if (post.type == "month_archive") { %>  
           <%- partial('_widget/month_archive') %>
         <% } else { %>
+
           <div class="post-info text-muted">
             <% if (config.author) { %>
               <!-- Author -->
-              <span class="author info">By <%- config.author %></span>
+              <span class="author info"><%= __('author_by') %>: <%- config.author %></span>
             <% } %>
             <!-- Date -->
-            <span class="date-time info">On
+            <span class="date-time info"><%= __('posted_on') %>:
               <span class="date"><%- date(post.date) %></span>
               <span class="time"><%- time(post.time) %></span>
             </span>
             <% if (post.categories && post.categories.length){ %>
             <!--  Categories  -->
-              <span class="categories info">Under <%- partial('categories', {categories: post.categories}) %></span>
+              <span class="categories info"><%= __("under_category") %> <%- partial('categories', {categories: post.categories}) %></span>
             <% } %>
           </div>
           <!-- Tags -->
           <% if (post.tags && post.tags.length) { %>
             <div class="post-tags text-muted">
-              Tags: <%- partial('tags', {tags: post.tags, tagHash: true}) %>
+              <%= __("under_tags") %>: <%- partial('tags', {tags: post.tags, tagHash: true}) %>
             </div>
           <% } %>
           <!-- Post Main Content -->
           <div class="post-content">
             <%- post.content %>
           </div>
+
         <% } %>
         
       </div> <!-- end col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 -->
@@ -46,6 +49,7 @@
   </div> <!-- end container typo -->
 </article>
 
+<!-- comment start -->
 <% if(post.comments){ %>
     <section id="comments">
     <% if (config.changyan.appid || theme.changyan.appid){ %>
@@ -55,6 +59,7 @@
         <% } %>
     </section>
 <% } %>
+<!-- comment end -->
 
 <% if (post.type == "tags" || post.type == "categories" || post.type == "month_archive" || post.type == "recent_posts") { %>
   <br><br>

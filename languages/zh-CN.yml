@@ -4,11 +4,18 @@ untitled_post: 无标题文章
 uncategorized: 未分类
 untagged: 无标签
 no_excerpt: 暂无文章摘要
-archive_title: 文章存档馆
-powered_by: Powered By 
 
+archive_title: Archive 文章归档
 categories: 分类
 tags: 标签
 tagcloud: 标签云
 month_archive: 月存档
 recent_posts: 新鲜事儿
+
+author_by: 作者
+posted_on: 发布时间
+under_category: 分类
+under_tags: 标签
+theme_by: 主题制作
+powered_by: 技术支持 
+

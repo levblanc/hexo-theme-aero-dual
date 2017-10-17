@@ -4,12 +4,10 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <p class="copyright text-muted">
-          &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || theme.author || config.title || theme.title %>
+          &copy; <%= config.since ? config.since + " - " : "" %><%= date(new Date(), 'YYYY') %> <%= config.author || theme.author || config.title || theme.title %>
         <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+          <%= __('theme_by') %> <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          <%= __('powered_by') %> <a target="_blank" href="http://hexo.io/">Hexo</a>
         </p>
       </div>
     </div>
