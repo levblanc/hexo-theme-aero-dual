@@ -1,0 +1,36 @@
+<!-- disqus start -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+<!-- following code is copied form hexo theme Next, thanks a lot -->
+
+var disqus_shortname = '<%= config.disqus_shortname %>';
+var disqus_identifier = '<%= page.path %>';
+var disqus_title = '<%= page.title %>';
+
+function run_disqus_script(disqus_script) {
+	var dsq = document.createElement('script');
+	dsq.type = 'text/javascript';
+	dsq.async = true;
+	dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}
+
+run_disqus_script('count.js');
+
+<% if (page.comments) { %>
+var disqus_config = function () {
+    this.page.url = disqus_url;
+    this.page.identifier = disqus_identifier;
+    this.page.title = disqus_title;
+};
+
+run_disqus_script('embed.js');
+
+<%}%>
+
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!-- disqus end -->

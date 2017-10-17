@@ -35,3 +35,13 @@
     </div>
   </div>
 </article>
+
+<% if(post.comments){ %>
+    <section id="comments">
+    <% if (config.changyan.appid){ %>
+            <%- partial('_widget/changyan') %>
+        <% }else if(config.disqus_shortname){ %>
+            <%- partial('_widget/disqus') %>
+        <% } %>
+    </section>
+<% } %>
