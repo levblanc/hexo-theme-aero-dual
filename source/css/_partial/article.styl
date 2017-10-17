@@ -26,7 +26,23 @@
   padding-bottom @padding-top
   font-size remify(15px)
 
-/* mobile style */
+ul.category-list,
+li ul.category-list-child
+  list-style none
+  margin remify(5px)
+  padding remify(3px)
+  width auto
+
+li ul.category-list-child
+  display none
+
+li.category-list-item
+  float left
+  > a
+    margin remify(5px)
+    padding remify(3px)
+    width auto
+
 @media only screen and (max-width: 414px)
   .post-tags,
   .post-info

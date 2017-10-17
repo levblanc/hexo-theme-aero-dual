@@ -2,12 +2,19 @@
 menu:
   Home: /
   Archives: /archives/
+  Categories: /categories/
+  Tags: /tags/
+  MonthArchive: /month_archive/
   About: /about/
   # change github and email values to your own addresses
-  Github: https://github.com/justinchou
-  Gitee: https://gitee.com/justinchou
-  Email: mailto:zhou78620051@126.com
-  QQ: tencent://message/?uin=78620051&Site=qq&Menu=yes
+#  Github: 
+#    url: https://github.com/justinchou
+#    target: _blank
+#  Gitee: 
+#    url: https://gitee.com/justinchou
+#    target: _blank
+#  Email: mailto:zhou78620051@126.com
+#  QQ: tencent://message/?uin=78620051&Site=qq&Menu=yes
 rss: /atom.xml
 
 # Set to false to disable banner
@@ -29,8 +36,6 @@ use_header_cover: true
 index_cover: /img/default-banner-dark.jpg
 # index_cover: /img/default-banner-light.jpg
 
-# Sidebar
-sidebar: bottom
 widgets:
 - category
 - archive
