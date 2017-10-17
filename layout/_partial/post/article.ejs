@@ -38,9 +38,9 @@
 
 <% if(post.comments){ %>
     <section id="comments">
-    <% if (config.changyan.appid){ %>
+    <% if (config.changyan.appid || theme.changyan.appid){ %>
             <%- partial('_widget/changyan') %>
-        <% }else if(config.disqus_shortname){ %>
+        <% }else if(config.disqus_shortname || theme.disqus_shortname){ %>
             <%- partial('_widget/disqus') %>
         <% } %>
     </section>

@@ -29,10 +29,15 @@ use_header_cover: true
 index_cover: /img/default-banner-dark.jpg
 # index_cover: /img/default-banner-light.jpg
 
+# Sidebar
+sidebar: bottom
 widgets:
 - category
-- tag
 - archive
+- tag
+- tag_cloud
+- month_archive
+- recent_posts
 
 # theme_style is default to 'light', change to dark?
 # theme_style: dark
@@ -41,9 +46,22 @@ widgets:
 archive_type: 'monthly'
 show_count: false
 
+# Changyan Comments
+changyan:
+  appid: 
+  config: 
+# Disqus Comments
+disqus_shortname:
+
+# Analysis
+## Baidu Analysis Tracking ID
+baidu_analytics: 
+## Google Analysis Tracking ID
+google_analytics:
+
+
+
 # favicon
 favicon: /favicon.png
 
-# Google Analytics Tracking ID
-google_analytics:
 

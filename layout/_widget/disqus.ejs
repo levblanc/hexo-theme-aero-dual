@@ -4,7 +4,7 @@
 
 <!-- following code is copied form hexo theme Next, thanks a lot -->
 
-var disqus_shortname = '<%= config.disqus_shortname %>';
+var disqus_shortname = '<%= config.disqus_shortname || theme.disqus_shortname %>';
 var disqus_identifier = '<%= page.path %>';
 var disqus_title = '<%= page.title %>';
 
