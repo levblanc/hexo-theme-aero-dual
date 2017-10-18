@@ -17,6 +17,8 @@ menu:
 #  QQ: tencent://message/?uin=78620051&Site=qq&Menu=yes
 rss: /atom.xml
 
+since: 2012
+
 # Set to false to disable banner
 use_header_cover: true
 
@@ -40,7 +42,7 @@ widgets:
 - category
 - archive
 - tag
-- tag_cloud
+- tagcloud
 - month_archive
 - recent_posts
 
