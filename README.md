@@ -4,7 +4,7 @@ A hexo theme with aero, responsive design. **Easy switch of dark and light style
 
 [See It Live Here](https://levblanc.github.io/) (configured as light theme style, blue theme color).
 
-**Please note: **
+**Please note:**
 
 This theme **does not** support widgets(other than tag, category and archive) and article comments(Disqus and others) out of the box. Adding them would be a **big maybe**, depending on my current workload. 
 
