@@ -2,7 +2,7 @@
 
 A hexo theme with aero, responsive design. **Easy switch of dark and light style by simple config ([will explain below](https://github.com/levblanc/hexo-theme-aero-dual#configuration)).** You can also change theme color by modifying corresponding stylesheet. Each style has **FIVE** colors ready to use ([check it out!](https://github.com/levblanc/hexo-theme-aero-dual#change-theme-color)).
 
-[See It Live Here](http://levblanc.github.io/)  
+[See It Live Here](https://levblanc.github.io/)  
 (configured as dark theme style, blue theme color, without automatic theme style switch by the time I fininshed this doc, will change in the future).
 
 **Please note: this theme doesn't support widgets(other than tag, category and archive) and article comments(Disqus and others) out of the box. Adding them would be a big maybe, depending on my current workload. If you really like this theme, feel free to tweak and play with it on adding them by yourself. Also, checking out other hexo themes may help. :)**
