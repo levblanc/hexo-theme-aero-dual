@@ -1,6 +1,7 @@
 <%- partial('_partial/header', {headerType: 'index'}) %>
 <!-- Home Page Post List -->
 <div class="container">
+  <%- partial('_partial/website-search') %>
   <div class="row">
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       <% page.posts.each(function(post){ %>
