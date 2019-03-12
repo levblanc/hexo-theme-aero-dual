@@ -40,3 +40,11 @@ favicon: /favicon.png
 # Google Analytics Tracking ID
 google_analytics:
 
+# 全站搜索，需下载hexo-generator-search才可使用
+local_search:
+  enable: false
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
