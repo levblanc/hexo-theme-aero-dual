@@ -186,18 +186,30 @@ Also, be aware of the color of the cover image you choose, since the title and m
 ### Menu
 
 Modify `menu` values in the theme's `_config.yml`.
-You can change `GitHub` and `Email` to other menu item names you want. Or you can just change these two keys' values to your own info.
+
+**CHANGE** `GitHub` and `Email` values to your own info.
 
 ``` yaml
 # Header Menu
 menu:
   Home: /
   Archives: /archives
-  # change github and email values to your own info
-  Github: https://github.com/levblanc
-  Email: mailto:levblanc@163.com
+  Github: https://github.com/<your-github-path>  # e.g.: https://github.com/levblanc
+  Email: mailto:<your-email-address> # e.g.: mailto:levblanc@163.com
 ```
 
+Or 
+
+**CHANGE** `GitHub` and `Email` to other names you want, follow by values
+
+``` yaml
+# Header Menu
+menu:
+  Home: /
+  Archives: /archives
+  Twitter: <your-twitter-account>
+  Instagram: <your-instagram-account>
+```
 
 ### Configuable texts
 
