@@ -10,13 +10,15 @@
   <meta property="og:site_name" content="<%= config.title || '' %>"/>
   <meta property="og:type" content="<%= page.title ? 'article' : 'website' %>" />
   <meta property="og:image" content="<%= config.url %><%= config.cover %>"/>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
   <% if (theme.rss) { %>
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
   <% if (theme.favicon) { %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
-
+  
+  <script type="text/javascript" charset="utf-8" async="" src="/js/search.js"></script>
   <!-- Site Title -->
   <title><%- config.title %></title>
 
